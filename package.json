@@ -7,6 +7,9 @@
     "start": "node dist/server.js",
     "test:load-envs": "dotenv -e .env.test",
     "test": "npm run test:load-envs -- jest -- --runInBand",
+    "test:ci": "npm run test:integration:migration && npm run test",
+    "test:integration": "npm run test:load-envs jest --config jest.integration.config.js --runInBand",
+    "test:integration:migration": "npm run test:load-envs prisma migrate reset --force",
     "test:migration": "npm run test:load-env prisma migrate deploy",
     "test:coverage": "npm run test -- --coverage"
   },
