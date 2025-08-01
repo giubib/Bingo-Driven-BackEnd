@@ -38,4 +38,4 @@ docker run -d --name api --network my_network \
   -p 5000:5000 \
   backend
 
-
+Deploy link: https://bingo-driven-backend-kyxa.onrender.com
